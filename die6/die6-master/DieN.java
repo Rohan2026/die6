@@ -37,8 +37,8 @@ public class DieN
    * Roll the die! Generate random number 1 <= x <= 6 and assign to value
    * Note that roll does NOT return the new value
    */
-  public void roll(int N) {
-    this.value = (int) (Math.random() * N) + 1;
+  public void roll(int sidesInTheRoll) {
+    this.value = (int) (Math.random() * sidesInTheRoll) + 1;
   }
 
   /**

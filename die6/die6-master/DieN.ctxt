@@ -7,7 +7,7 @@ comment1.text=\n\ Constructor\ to\ do\ an\ initial\ roll\ to\ set\ the\ first\ v
 comment2.params=
 comment2.target=int\ getValue()
 comment2.text=\n\ Getter\ for\ value\n\ @return\ Die\ value\n
-comment3.params=N
+comment3.params=sidesInTheRoll
 comment3.target=void\ roll(int)
 comment3.text=\n\ Roll\ the\ die\!\ Generate\ random\ number\ 1\ <\=\ x\ <\=\ 6\ and\ assign\ to\ value\n\ Note\ that\ roll\ does\ NOT\ return\ the\ new\ value\n
 comment4.params=

@@ -1,0 +1,15 @@
+#BlueJ class context
+comment0.target=YahtzeeDice
+comment1.params=
+comment1.target=YahtzeeDice()
+comment2.params=
+comment2.target=void\ roll()
+comment3.params=dieNumber
+comment3.target=void\ roll(int)
+comment4.params=
+comment4.target=java.lang.String\ summarize()
+comment5.params=
+comment5.target=java.lang.String\ toString()
+comment6.params=
+comment6.target=java.lang.String\ rollAndSummarize()
+numComments=7

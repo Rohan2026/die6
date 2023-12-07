@@ -27,22 +27,42 @@ public class YahtzeeDice
     
     public void roll(int dieNumber)
     {
+     if (dieNumber == 1)
+     {
+         die1.roll();
+     }
+     else if (dieNumber == 2)
+     {
+         die2.roll();
+     }
+     else if (dieNumber == 3)
+     {
+         die3.roll();
+     }
+     else if (dieNumber == 4)
+     {
+         die4.roll();
+     }
+     else if (dieNumber == 5)
+     {
+         die5.roll();
+     }
+    }
+    
+    public void Foundation()
+    {
+    {
         
+    }
     }
     
     public String summarize()
     {
-        return "hello";
+        return "1 -";
     }
     
     public String toString()
     {
         return "hello";
     }
-
-    public String rollAndSummarize()
-    {
-        return "Hello";
-    }
-    
 }

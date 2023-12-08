@@ -7,6 +7,7 @@ public class YahtzeeDice
     Die6 die3;
     Die6 die4;
     Die6 die5;
+    int[] dieset = {die1, die2, die3, die4, die5}
     public YahtzeeDice()
     {
         die1 = new Die6();
@@ -49,16 +50,20 @@ public class YahtzeeDice
      }
     }
     
-    public void Foundation()
-    {
-    {
-        
-    }
-    }
-    
     public String summarize()
     {
-        return "1 -";
+        int[] sideArray = {1, 2, 3, 4, 5, 6};
+        int[] dieCount = {0, 0, 0, 0, 0, 0};
+        for (x=0; x<5; x++)
+        {
+            for (y=0; x < 5; y++)
+            {
+                if (dieSet[x] == sideArray[y])
+                {
+                    dieCount[y] = dieCount[y]++;
+                }
+            }
+        }
     }
     
     public String toString()

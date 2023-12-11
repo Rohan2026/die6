@@ -7,7 +7,9 @@ public class YahtzeeDice
     Die6 die3;
     Die6 die4;
     Die6 die5;
-    int[] dieset = {die1, die2, die3, die4, die5}
+    int y = 0;
+    int x = 0;
+    Die6[] dieset = {die1, die2, die3, die4, die5};
     public YahtzeeDice()
     {
         die1 = new Die6();
@@ -58,7 +60,7 @@ public class YahtzeeDice
         {
             for (y=0; x < 5; y++)
             {
-                if (dieSet[x] == sideArray[y])
+                if (dieset[x].getValue() == sideArray[y])
                 {
                     dieCount[y] = dieCount[y]++;
                 }
@@ -68,6 +70,6 @@ public class YahtzeeDice
     
     public String toString()
     {
-        return "hello";
+        return "Dice Values:" + die1.getValue() + " " + die2.getValue() + " " + die3.getValue() + " " + die4.getValue() + " " + die5.getValue();
     }
 }

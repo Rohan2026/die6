@@ -1,15 +1,12 @@
 
 public class YahtzeeDice
 {
-
+    private Die6[] dice;
     Die6 die1;
     Die6 die2;
     Die6 die3;
     Die6 die4;
     Die6 die5;
-    int y = 0;
-    int x = 0;
-    Die6[] dieset = {die1, die2, die3, die4, die5};
     public YahtzeeDice()
     {
         die1 = new Die6();
@@ -54,18 +51,34 @@ public class YahtzeeDice
     
     public String summarize()
     {
-        int[] sideArray = {1, 2, 3, 4, 5, 6};
-        int[] dieCount = {0, 0, 0, 0, 0, 0};
-        for (x=0; x<5; x++)
-        {
-            for (y=0; x < 5; y++)
-            {
-                if (dieset[x].getValue() == sideArray[y])
-                {
-                    dieCount[y] = dieCount[y]++;
-                }
+        int[] counts = new int[6];  // Assuming six-sided dice
+
+        // Count the occurrences of each dice value
+        counts[die1.getValue() - 1]++;
+        counts[die2.getValue() - 1]++;
+        counts[die3.getValue() - 1]++;
+        counts[die4.getValue() - 1]++;
+        counts[die5.getValue() - 1]++;
+
+        // Initialize an empty string for the summary
+        String summary = "";
+
+        // Build the summary string by concatenating information for each dice value
+        for (int i = 0; i < counts.length; i++) {
+            if (counts[i] > 0) {
+            // Concatenate the dice value, count, and a semicolon and space
+            summary += (i + 1) + "-" + counts[i] + "; ";
             }
         }
+
+        // Check if the summary is not empty before removing the trailing semicolon and space
+        if (!summary.isEmpty()) {
+        // Remove the last two characters (trailing semicolon and space)
+        summary = summary.substring(0, summary.length() - 2);
+        }
+
+        // Return the final summary string
+        return summary; 
     }
     
     public String toString()

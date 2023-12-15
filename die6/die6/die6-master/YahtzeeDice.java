@@ -65,19 +65,12 @@ public class YahtzeeDice
 
         // Build the summary string by concatenating information for each dice value
         for (int i = 0; i < counts.length; i++) {
-            if (counts[i] > 0) {
+            if (counts[i] >= 0) {
             // Concatenate the dice value, count, and a semicolon and space
             summary += (i + 1) + "-" + counts[i] + "; ";
             }
         }
 
-        // Check if the summary is not empty before removing the trailing semicolon and space
-        if (!summary.isEmpty()) {
-        // Remove the last two characters (trailing semicolon and space)
-        summary = summary.substring(0, summary.length() - 2);
-        }
-
-        // Return the final summary string
         return summary; 
     }
     
